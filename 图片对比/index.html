@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>对比</title>
+		<link rel="stylesheet" href="css/BeerSlider.css">
+		<script src="js/BeerSlider.js"></script>
+		<style>
+			body {
+				background-color: #272727
+			}	
+			.m {
+				width: 482px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="m">
+			<div id="slider" class="beer-slider" data-beer-label="before">
+				<img src="img/aa.jpg" alt="">
+				<div class="beer-reveal" data-beer-label="after">
+					<img src="img/bb.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<script>
+			new BeerSlider(document.getElementById('slider'));
+		</script>
+	</body>
+
+</html>

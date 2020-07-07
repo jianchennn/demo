@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<form action="" class="form1">
+		<div class="item" id="Province">
+			<i>请选择省份</i>
+			<ul>
+				<li>请选择省份</li>
+			</ul>
+			<input type="hidden" name="pro" value="请选择省份" />
+		</div>
+		<div class="item" id="City">
+			<i>请选择城市</i>
+			<ul>
+				<li>请选择城市</li>
+			</ul>
+			<input type="hidden" name="city" value="请选择城市" />
+		</div>
+		<div class="item" id="Area">
+			<i>请选择地区</i>
+			<ul>
+				<li>请选择地区</li>
+			</ul>
+			<input type="hidden" name="area" value="请选择地区" />
+		</div>
+	</form>	
+
+	<script src="http://www.jq22.com/jquery/1.4.4/jquery.min.js"></script>
+    <script src="js/city.min.js"></script>
+    <script src="js/jquery.cityselect.js"></script>
+    <script>
+        $(function () { //调用插件
+            $.fn.citySelect();
+        });
+        $(function () {
+            form1 = $('form[name=form1]'),
+            prev = $('input[name=cho_Province]', form1),
+            city = $('input[name=cho_City]', form1),
+            area = $('input[name=cho_Area]', form1),
+            value = ['请选择省份', '请选择城市', '请选择地区'];
+            form1.submit(function () {
+                if (prev.val() == value[0]) {
+                    alert(value[0]);
+                    return false;
+                };
+                if (city.val() == value[1]) {
+                    alert(value[1]);
+                    return false;
+                };
+                if (area.val() == value[2]) {
+                    alert(value[2]);
+                    return false;
+                }
+            });
+        });
+    </script>
+   
+</body>
+</html>
